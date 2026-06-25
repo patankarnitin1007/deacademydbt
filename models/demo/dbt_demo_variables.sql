@@ -1,9 +1,9 @@
 {%- set name=['Nick','Jay','Sach'] -%}
 
-    {%- for i in name -%}
+    {%- for i in name %}
         {%- if i =='Nick' -%}
-            Hi {{ i }}.
+           -- Hi {{ i }}.
         {% else %}
-            Bye  {{ i }}.
+           -- Bye  {{ i }}.
         {%- endif -%}
     {%- endfor -%}        
