@@ -13,6 +13,12 @@ vars:
    target_db: XXDEA_GLUEDB
    target_schema: PUBLIC
    stage_name: XXDEA_GLUEDB.PUBLIC.GLUE_S3_STAGE
+   #project 4 variables for SCD2 type
+   wrk_schema: BRONZE
+   file_format_csv: SCD2_DB.BRONZE.XXDEA_CSV_FORMAT
+   purge_status: FALSE
+   scd2_stage_name: SCD2_DB.BRONZE.SCD2_STAGE
+   rawhist_db: SCD2_DB
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -41,7 +47,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  my_new_project:
-    # Applies to all files under models/example/
+  nitin_dbt_workshop:
     example:
-      +materialized: table
+      schema: example 
+    silver:
+      schema: silver
+      materialized: table
+    gold:
+      schema: gold
+      materialized: view
