@@ -13,7 +13,9 @@ models:
             description: "The column contain continent of the country"
             tests:
                 - accepted_values:
-                    values: ['Antarctica']
+                     arguments:
+                       values:
+                          - Antarctica
 
     - name: country_details_north_america
       description: "dbt model to create the country details mart table for north america continent"
@@ -27,7 +29,9 @@ models:
             description: "The column contain continent of the country"
             tests:
                 - accepted_values:
-                    values: ['North America']
+                    arguments:
+                       values:
+                          - North America
 
     - name: country_details_south_america
       description: "dbt model to create the country details mart table for south america continent"
@@ -41,7 +45,9 @@ models:
             description: "The column contain continent of the country"
             tests:
                 - accepted_values:
-                    values: ['South America']
+                    arguments:
+                       values:
+                          - South America
  
     - name: country_details_europe
       description: "dbt model to create the country details mart table for europe continent"
@@ -55,7 +61,9 @@ models:
             description: "The column contain continent of the country"
             tests:
                 - accepted_values:
-                    values: ['Europe']
+                    arguments:
+                       values:
+                          - Europe
 
     - name: country_details_africa
       description: "dbt model to create the country details mart table for africa continent"
@@ -69,7 +77,9 @@ models:
             description: "The column contain continent of the country"
             tests:
                 - accepted_values:
-                    values: ['Africa']
+                    arguments:
+                       values:
+                          - Africa
 
     - name: country_details_asia
       description: "dbt model to create the country details mart table for asia continent"
@@ -83,7 +93,9 @@ models:
             description: "The column contain continent of the country"
             tests:
                 - accepted_values:
-                    values: ['Asia']
+                    arguments:
+                       values:
+                          - Asia
  
     - name: country_details_oceania
       description: "dbt model to create the country details mart table for oceania continent"
@@ -97,4 +109,6 @@ models:
             description: "The column contain continent of the country"
             tests:
                 - accepted_values:
-                    values: ['Oceania']
+                    arguments:
+                       values:
+                          - Oceania
